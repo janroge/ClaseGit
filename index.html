@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gran Inmobiliaria - Inmuebles de Calidad</title>
+
+    <!-- Descripción para SEO -->
+    <meta
+      name="description"
+      content="Gran Inmobiliaria ofrece una amplia gama de inmuebles en venta y arriendo. Encuentra tu hogar ideal con nosotros."
+    />
+    <meta
+      name="keywords"
+      content="inmobiliaria, venta de casas, arriendo de apartamentos, bienes raíces"
+    />
+    <meta name="author" content="Gran Inmobiliaria" />
+
+    <!-- Favicons para dispositivos y navegadores -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+
+    <!-- Open Graph y Twitter Card -->
+    <meta
+      property="og:title"
+      content="Gran Inmobiliaria - Inmuebles de Calidad"
+    />
+    <meta
+      property="og:description"
+      content="Gran Inmobiliaria cuenta con una gran selección de inmuebles. Encuentra el tuyo hoy mismo."
+    />
+    <meta property="og:image" content="assets/img/build_header.svg" />
+    <meta property="og:url" content="https://www.graninmobiliaria.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Gran Inmobiliaria - Inmuebles de Calidad"
+    />
+    <meta
+      name="twitter:description"
+      content="Encuentra tu nuevo hogar en Gran Inmobiliaria. Ofrecemos propiedades de alta calidad."
+    />
+    <meta name="twitter:image" content="assets/img/build_header.svg" />
+
+    <!-- Google Fonts (opcional) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Archivo CSS principal -->
+  </head>
+
+  <body>
+    <!--Barra de navegación-->
+    <nav id="navbar">
+      <ul class="navbar-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#inmuebles">Lista de Inmuebles</a></li>
+        <li><a href="#inmueble-principal">Inmueble Principal</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header id="inicio" class="header">
+      <div class="header-content">
+        <h1>Bienvenidos a Gran Inmobiliaria 🏠</h1>
+        <p>
+          Tu inmobiliaria de confianza con una amplia selección de propiedades
+          de alta calidad.
+        </p>
+      </div>
+      <div class="header-image">
+        <img
+          src="assets/img/build_header.svg"
+          alt="Edificio de gran altura"
+          class="responsive-img"
+        />
+      </div>
+    </header>
+
+    <hr />
+
+    <!-- Sección de Lista de Inmuebles -->
+    <section id="inmuebles" class="section-inmuebles">
+      <h2>Propiedades Más Vendidas</h2>
+      <div class="inmuebles-grid">
+        <article class="inmueble-item">
+          <img
+            src="https://placehold.co/200x200"
+            alt="Inmueble 1"
+            class="responsive-img"
+          />
+          <h3>Inmueble 1</h3>
+        </article>
+        <article class="inmueble-item">
+          <img
+            src="https://picsum.photos/id/49/200/200"
+            alt="Inmueble 2"
+            class="responsive-img"
+          />
+          <h3>Inmueble 2</h3>
+        </article>
+        <article class="inmueble-item">
+          <img
+            src="https://picsum.photos/id/57/200/200"
+            alt="Inmueble 3"
+            class="responsive-img"
+          />
+          <h3>Inmueble 3</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección de Inmueble Principal -->
+    <section id="inmueble-principal" class="section-inmueble-principal">
+      <h2>Inmueble Destacado del Mes</h2>
+      <p>
+        Este mes destacamos una propiedad única con todas las comodidades que
+        buscas.
+      </p>
+      <!-- Imagen del inmueble como fondo en CSS -->
+      <a href="#" class="button-link">Más Información</a>
+    </section>
+
+    <hr />
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section-contact">
+      <h2>Contáctanos</h2>
+      <p>
+        ¿Interesado en alguna de nuestras propiedades? Llena el formulario y nos
+        pondremos en contacto.
+      </p>
+      <div class="contact-container">
+        <!-- Formulario de contacto -->
+        <form class="contact-form">
+          <p>
+            <label for="name">Nombre completo</label><br />
+            <input
+              type="text"
+              id="name"
+              name="nombre_completo"
+              placeholder="Ej: Pepe Perez"
+              required
+              minlength="3"
+            />
+          </p>
+          <p>
+            <label for="email">Correo Electrónico</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </p>
+          <p>
+            <label for="message">Mensaje</label><br />
+            <textarea
+              name="mensaje"
+              id="message"
+              rows="6"
+              maxlength="500"
+            ></textarea>
+          </p>
+          <p>
+            <button type="submit" class="btn-submit">Enviar</button>
+          </p>
+        </form>
+
+        <!-- Mapa de ubicación -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1489.2534973000838!2d-73.11898658959915!3d7.121752214956194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68156218477d99%3A0x7ff9e411b4be6669!2sPASEO%20ESPA%C3%91A%20INMOBILIARIA%20ABOGADOS!5e0!3m2!1ses-419!2sco!4v1730143957299!5m2!1ses-419!2sco"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="responsive-iframe"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="footer">
+      <p>Todos los derechos reservados © Gran Inmobiliaria 2024</p>
+    </footer>
+  </body>
+</html>
