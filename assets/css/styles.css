@@ -1,0 +1,217 @@
+/* Reset básico */
+* {
+  margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+  padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total del elemento */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Establece la fuente predeterminada del cuerpo */
+  color: #333; /* Establece el color del texto */
+  line-height: 1.6; /* Establece la altura de línea */
+}
+
+/* Navbar */
+#navbar {
+  background-color: #004080; /* Color de fondo del navbar */
+  padding: 1rem 0; /* Relleno superior e inferior del navbar */
+  text-align: center; /* Centra el contenido del navbar */
+}
+
+.navbar-list {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  display: flex; /* Usa flexbox para los elementos de la lista */
+  justify-content: center; /* Centra los elementos de la lista horizontalmente */
+  gap: 2rem; /* Espacio entre los elementos de la lista */
+}
+
+.navbar-list a {
+  color: #fff; /* Color del texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-weight: bold; /* Hace el texto de los enlaces en negrita */
+}
+
+.navbar-list a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+}
+
+/* Header */
+.header {
+  display: flex; /* Usa flexbox para el encabezado */
+  align-items: center; /* Alinea los elementos del encabezado verticalmente */
+  justify-content: space-between; /* Espacia los elementos del encabezado */
+  padding: 2rem; /* Relleno del encabezado */
+  background-color: #f4f4f4; /* Color de fondo del encabezado */
+}
+
+.header-content {
+  max-width: 600px; /* Ancho máximo del contenido del encabezado */
+}
+
+.header-image .responsive-img {
+  max-width: 100%; /* Ancho máximo de la imagen responsiva */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Sección de inmuebles */
+.section-inmuebles {
+  padding: 2rem; /* Relleno de la sección de inmuebles */
+  text-align: center; /* Centra el texto de la sección de inmuebles */
+}
+
+.section-inmuebles h2 {
+  margin-bottom: 1rem; /* Margen inferior del título */
+  color: #004080; /* Color del título */
+}
+
+.inmuebles-grid {
+  display: grid; /* Usa grid layout para los inmuebles */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Columnas responsivas */
+  gap: 1.5rem; /* Espacio entre los elementos del grid */
+  margin-top: 1.5rem; /* Margen superior del grid */
+}
+
+.inmueble-item img {
+  width: 100%; /* Ancho completo de la imagen */
+  border-radius: 5px; /* Bordes redondeados de la imagen */
+}
+
+/* Inmueble Principal */
+.section-inmueble-principal {
+  background-image: url("assets/img/casa.jpg"); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* No repite la imagen de fondo */
+  padding: 3rem 2rem; /* Relleno de la sección */
+  color: #fff; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  position: relative; /* Posiciona relativamente para el pseudo-elemento */
+}
+
+.section-inmueble-principal::before {
+  content: ""; /* Contenido vacío para el pseudo-elemento */
+  position: absolute; /* Posiciona absolutamente dentro del contenedor */
+  top: 0; /* Posición superior del pseudo-elemento */
+  left: 0; /* Posición izquierda del pseudo-elemento */
+  width: 100%; /* Ancho completo del pseudo-elemento */
+  height: 100%; /* Altura completa del pseudo-elemento */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+.section-inmueble-principal h2,
+.section-inmueble-principal p,
+.section-inmueble-principal .button-link {
+  position: relative; /* Posiciona relativamente para estar encima del pseudo-elemento */
+  z-index: 2; /* Coloca el contenido encima del pseudo-elemento */
+}
+
+.button-link {
+  display: inline-block; /* Muestra el enlace como un bloque en línea */
+  padding: 0.5rem 1rem; /* Relleno del enlace */
+  background-color: #ff5733; /* Color de fondo del enlace */
+  color: #fff; /* Color del texto del enlace */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  border-radius: 5px; /* Bordes redondeados del enlace */
+  margin-top: 1rem; /* Margen superior del enlace */
+}
+
+.button-link:hover {
+  background-color: #ff4519; /* Color de fondo del enlace al pasar el ratón */
+}
+
+/* Sección de contacto */
+.section-contact {
+  padding: 2rem; /* Relleno de la sección de contacto */
+  text-align: center; /* Centra el texto de la sección de contacto */
+  background-color: #f9f9f9; /* Color de fondo de la sección de contacto */
+}
+
+.section-contact h2 {
+  color: #004080; /* Color del título de la sección de contacto */
+}
+
+.contact-container {
+  display: flex; /* Usa flexbox para el contenedor de contacto */
+  flex-direction: column; /* Dirección de los elementos en columna */
+  gap: 1rem; /* Espacio entre los elementos del contenedor */
+  margin-top: 1.5rem; /* Margen superior del contenedor */
+}
+
+.contact-form {
+  max-width: 500px; /* Ancho máximo del formulario de contacto */
+  margin: 0 auto; /* Centra el formulario de contacto */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%; /* Ancho completo de los elementos del formulario */
+  padding: 0.75rem; /* Relleno de los elementos del formulario */
+  margin-bottom: 1rem; /* Margen inferior de los elementos del formulario */
+}
+
+.contact-form button {
+  background-color: #004080; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde para el botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.contact-form button:hover {
+  background-color: #0059b3; /* Color de fondo del botón al pasar el ratón */
+}
+
+.responsive-iframe {
+  width: 100%; /* Ancho completo del iframe */
+  height: 300px; /* Altura del iframe */
+  border: none; /* Sin borde para el iframe */
+}
+
+/* Footer */
+#footer {
+  background-color: #004080; /* Color de fondo del pie de página */
+  color: #fff; /* Color del texto del pie de página */
+  text-align: center; /* Centra el texto del pie de página */
+  padding: 1rem 0; /* Relleno del pie de página */
+  margin-top: 2rem; /* Margen superior del pie de página */
+}
+
+/* Imágenes responsivas */
+.responsive-img {
+  width: 100%; /* Ancho completo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Dirección de los elementos en columna */
+    text-align: center; /* Centra el texto del encabezado */
+  }
+
+  .navbar-list {
+    flex-direction: column; /* Dirección de los elementos en columna */
+    gap: 1rem; /* Espacio entre los elementos de la lista */
+  }
+
+  .inmuebles-grid {
+    grid-template-columns: 1fr; /* Una columna para el grid */
+  }
+}
+
+@media (max-width: 480px) {
+  .button-link,
+  .contact-form button {
+    padding: 0.75rem; /* Relleno de los botones */
+  }
+
+  .header,
+  .section-inmueble-principal,
+  .section-contact {
+    padding: 1.5rem; /* Relleno de las secciones */
+  }
+}
